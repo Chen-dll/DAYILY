@@ -1,7 +1,9 @@
 name: 网易云音乐日推自动创建歌单
 
 on:
-  workflow_dispatch:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 0/3 * * *'
 
 jobs:
   build:
